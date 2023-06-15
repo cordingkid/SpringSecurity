@@ -27,6 +27,8 @@ public class LoginController {
 			model.addAttribute("logout", "Logout!");
 		}
 		
+		
+		
 		return "loginForm";
 	}
 	

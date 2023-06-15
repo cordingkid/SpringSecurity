@@ -109,6 +109,14 @@
 			<version>1.2</version>
 		</dependency>
 		
+		<!-- 롬복 -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.22</version>
+			<scope>provided</scope>
+		</dependency>
+		
 		<!-- 스프링 시큐리티 라이브러리 의존관계 정의 시작============= -->
 		
 		<!-- 스프링 시큐리트를 웹에서 동작하도록 해줌 -->
@@ -140,6 +148,53 @@
 		</dependency>
 		
 		<!-- 스프링 시큐리티 라이브러리 의존관계 정의 end============= -->
+		
+		
+		<!-- 데이터베이스 라이브러리 의존 관계 정의 시작   ======================================== -->
+		<!-- XML로 쿼리를 작성하게 해주는 라이브러리 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.5.10</version>
+		</dependency>
+		<!-- 스프링과 mybatis를 연동하게 해주는 라이브러리 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>2.0.4</version>
+		</dependency>
+		
+		<!-- 스프링에서 jdbc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		
+		<!-- 
+			dbcp : database connection poool > 커넥션 객체를 미리 만들어 놓고 쓰고 반납
+					미리 커넥션 객체를 여러개 만들어 놓고 가용해야할때 커넥션을 들고가서 사용하다가
+					다시 반납 최근에는 hikaricp를 사용하는 경우도 있음
+		 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.bgee.log4jdbc-log4j2</groupId>
+			<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
+			<version>1.16</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<version>21.1.0.0</version>
+		</dependency>
+		
+		<!-- 데이터베이스 라이브러리 의존 관계 정의 끝 ======================================== -->
 	
 		<!-- Test -->
 		<dependency>
